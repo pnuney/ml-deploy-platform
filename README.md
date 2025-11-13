@@ -14,19 +14,7 @@ A production style machine learning inference platform built with FastAPI, Docke
 
 ## Architecture
 
-Client
-|
-v
-Application Load Balancer
-|
-v
-Target Group (HTTP 8080)
-|
-v
-ECS Fargate Task
-|
-v
-FastAPI Inference Service
+Client -> Application Load Balancer -> Target Group (HTTP 8080) -> ECS Fargate Task -> FastAPI Inference Service
 
 
 ## Deployment Overview
@@ -102,3 +90,4 @@ README.md
 ## About This Project
 
 This project demonstrates the full lifecycle of deploying an ML inference service to production style infrastructure. It includes containerization, image management, load balanced ECS deployment, automated IaC, and real time request handling. It can be extended with model loading from S3, HTTPS via ACM, autoscaling policies, and CI CD integration.
+
